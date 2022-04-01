@@ -11,7 +11,7 @@ class Product < ActiveRecord::Base
     validates :price, numericality: {greater_than: 0}
 
     def to_s
-        "N°#{id} : #{name}, #{price}CHF"
+        "N°#{id} : #{name}, #{price} CHF"
     end
 
 end

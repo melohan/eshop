@@ -136,10 +136,36 @@ class Car < ActiveRecord::Base
 end
 ```
 
+### Callbacks
+
+Example 
+```ruby
+before_create { self.item_price = self.product.price }
+```
+
+The callbacks are executed in this order according to the three scenarios
+
+    At the creation:      TO update:            To destruction:
+
+    before_validation     before_validation     before_destroy
+    after_validation      after_validation      around_destroy
+    before_save           before_save           after_destroy
+    around_save           around_save
+    before_create         before_update
+    around_create         around_update
+    after_create          after_update
+    after_save            after_save
+ 
+
 ## Methods
 
 ## each
 Demo with display
 ```ruby
 Product.cheap.first(3).each{|p| puts p.to_s }   
+```
+
+## Sum
+```ruby
+order_items.sum(&:price)
 ```
