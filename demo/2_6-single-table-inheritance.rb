@@ -2,7 +2,7 @@ require_relative '../connection'
 require_relative '../models'
 
 puts "-----------------------"
-puts "Requirement 5"
+puts "Requirement 6"
 puts "-----------------------"
 
 client      = Client.create!(firstname: 'Fran', lastname: 'Fine')
