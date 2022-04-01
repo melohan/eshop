@@ -19,6 +19,7 @@ rake db:new_migration name=CreateMy_object     options="attribute1:string attrib
 ## Relations
 
 ### 1-N
+
 Table `categories` has multiple `products`:
 
 Add `references` in table `products`
@@ -48,18 +49,19 @@ end
 `order` is composed of *several* `order_items` which `each reference a product`.
 ```ruby
 class Order < ActiveRecord::Base
+    belongs_to :client
     has_many :order_items
     has_many :products, through: :order_items
 end
-
+  
 class Product < ActiveRecord::Base
-    has_many :orders, through: :order_items
-    has_many :order_items
     belongs_to :category
+    has_many :order_items
+    has_many :orders, through: :order_items
 end
 
 class OrderItem < ActiveRecord::Base
     belongs_to :order
-    belongs_to :product, foreign_key: 'item_id'
+    belongs_to :product
 end
 ```

@@ -46,13 +46,14 @@ You have to define limit, cascade etc in theses files in `db/migrate/*`.
 touch models/client.rb models/category.rb models/product.rb models/order.rb models/order_item.rb 
 ```
 
-5. Translate relations in models
+5. Translate relations in models here a few examples
 
 An `order` is ordered by a customer
 ```ruby
 class Order < ActiveRecord::Base
-  belongs_to :client
+    belongs_to :client
 end
+  
 ```
 
 A `customer` can place several orders.
@@ -66,21 +67,23 @@ Add in `order` is composed of `several` order_items which each reference a produ
 
 ```ruby
 class Order < ActiveRecord::Base
+    # to add
     has_many :order_items
     has_many :products, through: :order_items
 end
 
 class Product < ActiveRecord::Base
-    has_many :orders, through: :order_items
-    has_many :order_items
     belongs_to :category
+    has_many :order_items
+    has_many :orders, through: :order_items
 end
 
 class OrderItem < ActiveRecord::Base
     belongs_to :order
-    belongs_to :product, foreign_key: 'item_id'
+    belongs_to :product
 end
 ```
+explicit foreign key like this `belongs_to :product, foreign_key: 'item_id'`
 
 `Table orders`
 

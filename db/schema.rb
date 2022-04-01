@@ -25,7 +25,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_31_214558) do
     t.integer "quantity"
     t.decimal "item_price", precision: 10, scale: 2
     t.bigint "order_id"
+    t.bigint "product_id"
     t.index ["order_id"], name: "index_order_items_on_order_id"
+    t.index ["product_id"], name: "index_order_items_on_product_id"
   end
 
   create_table "orders", charset: "utf8mb4", force: :cascade do |t|
@@ -45,6 +47,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_31_214558) do
   end
 
   add_foreign_key "order_items", "orders", on_delete: :cascade
+  add_foreign_key "order_items", "products"
   add_foreign_key "orders", "clients"
   add_foreign_key "products", "categories"
 end
