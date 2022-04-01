@@ -21,7 +21,7 @@ Step by step realization of the project:
 3. [Scopes](documentation/requirements/2_3-requirement.md)
 4. [Validations](documentation/requirements/2_4-requirement.md)
 5. [Callbacks](documentation/requirements/2_5-requirement.md)
-6. [-](documentation/requirements/2_6-requirement.md)
+6. [Single Table inheritance](documentation/requirements/2_6-requirement.md)
 7. [-](documentation/requirements/2_7-requirement.md)
 8. [-](documentation/requirements/2_8-requirement.md)
 9. [-](documentation/requirements/2_9-requirement.md)

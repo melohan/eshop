@@ -16,7 +16,23 @@ rake db:new_migration name=CreateMy_object     options="attribute1:string attrib
 |t.integer :attribute|
 |t.references :otherObject, foreign_key: true, type: :bigint|
 
-## Relations
+### Add column
+
+Command
+```shell
+rake db:new_migration name=add_type_to_clients
+```
+
+And if you need to specify or edit a type, edit migration file
+```shell
+  def change
+    change_table :clients do |t|
+      t.string :brand, limit: 120
+    end
+  end
+```
+
+## DB Relations
 
 ### 1-N
 

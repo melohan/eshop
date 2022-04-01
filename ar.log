@@ -545,3 +545,15 @@ D, [2022-04-01T10:34:25.170160 #13189] DEBUG -- :   OrderItem Create (0.7ms)  IN
 D, [2022-04-01T10:34:25.172130 #13189] DEBUG -- :   OrderItem Create (0.8ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `order_id`, `product_id`) VALUES (10, 60.0, 9, 20)
 D, [2022-04-01T10:34:25.174095 #13189] DEBUG -- :   OrderItem Create (0.7ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `order_id`, `product_id`) VALUES (5, 30.0, 9, 21)
 D, [2022-04-01T10:34:25.177423 #13189] DEBUG -- :   TRANSACTION (2.7ms)  COMMIT
+D, [2022-04-01T11:11:41.003113 #16062] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-01T11:11:41.004219 #16062] DEBUG -- :   Client Create (0.8ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Fran', 'Fine')
+D, [2022-04-01T11:11:41.012273 #16062] DEBUG -- :   TRANSACTION (6.5ms)  COMMIT
+D, [2022-04-01T11:11:41.016407 #16062] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-01T11:11:41.017430 #16062] DEBUG -- :   Individual Create (0.7ms)  INSERT INTO `clients` (`type`, `firstname`, `lastname`) VALUES ('Individual', 'Maxwell', 'Sheffield')
+D, [2022-04-01T11:11:41.019409 #16062] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT
+D, [2022-04-01T11:12:22.423644 #16119] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-01T11:12:22.424733 #16119] DEBUG -- :   Client Create (0.7ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Fran', 'Fine')
+D, [2022-04-01T11:12:22.434080 #16119] DEBUG -- :   TRANSACTION (6.5ms)  COMMIT
+D, [2022-04-01T11:12:22.443431 #16119] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-01T11:12:22.444343 #16119] DEBUG -- :   Individual Create (0.6ms)  INSERT INTO `clients` (`type`, `firstname`, `lastname`) VALUES ('Individual', 'Maxwell', 'Sheffield')
+D, [2022-04-01T11:12:22.446413 #16119] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT

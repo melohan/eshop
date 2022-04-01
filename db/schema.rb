@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_31_214558) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_01_085859) do
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", limit: 50
     t.string "description"
   end
 
   create_table "clients", charset: "utf8mb4", force: :cascade do |t|
+    t.string "type"
     t.string "firstname", limit: 60
     t.string "lastname", limit: 60
+    t.string "brand", limit: 120
   end
 
   create_table "order_items", charset: "utf8mb4", force: :cascade do |t|
