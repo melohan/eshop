@@ -2,8 +2,9 @@ require_relative '../connection'
 require_relative '../models'
 
 puts "-----------------------"
-puts "Requirement 3"
+puts "Requirement 4"
 puts "-----------------------"
+
 client1 = Client.create!(firstname: 'Lily-Jane', lastname: 'DoeDoe')
 
 order = Order.new(client: client1)
