@@ -390,3 +390,39 @@ D, [2022-04-01T09:15:06.750677 #7777] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
 D, [2022-04-01T09:15:06.753752 #7777] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
 D, [2022-04-01T09:15:06.754834 #7777] DEBUG -- :   Order Update (0.9ms)  UPDATE `orders` SET `orders`.`client_id` = 1 WHERE `orders`.`id` = 2
 D, [2022-04-01T09:15:06.756558 #7777] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2022-04-01T09:29:52.275994 #8891] DEBUG -- :   Product Load (1.4ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-01T09:29:52.285542 #8891] DEBUG -- :   Product Load (0.8ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 3
+D, [2022-04-01T09:29:52.289678 #8891] DEBUG -- :   OrderItem Load (0.7ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 1
+D, [2022-04-01T09:29:52.295770 #8891] DEBUG -- :   OrderItem Load (0.8ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 3
+D, [2022-04-01T09:31:20.159081 #9016] DEBUG -- :   Product Load (1.2ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-01T09:31:20.169040 #9016] DEBUG -- :   Product Load (0.9ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 3
+D, [2022-04-01T09:31:20.172958 #9016] DEBUG -- :   OrderItem Load (0.8ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 1
+D, [2022-04-01T09:31:20.179494 #9016] DEBUG -- :   OrderItem Load (0.8ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 3
+D, [2022-04-01T09:54:17.899462 #9365] DEBUG -- :   Product Load (0.9ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-01T09:54:17.907603 #9365] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 3
+D, [2022-04-01T09:54:17.910371 #9365] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 1
+D, [2022-04-01T09:54:17.920152 #9365] DEBUG -- :   Product Load (0.6ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
+D, [2022-04-01T09:54:17.921779 #9365] DEBUG -- :   OrderItem Load (0.6ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 3
+D, [2022-04-01T09:54:17.923052 #9365] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
+D, [2022-04-01T09:54:17.924472 #9365] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1
+D, [2022-04-01T09:54:37.595139 #9401] DEBUG -- :   Product Load (1.5ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-01T09:54:37.603995 #9401] DEBUG -- :   Product Load (0.9ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 3
+D, [2022-04-01T09:54:37.614229 #9401] DEBUG -- :   OrderItem Load (0.8ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 1
+D, [2022-04-01T09:54:37.630528 #9401] DEBUG -- :   Product Load (1.2ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
+D, [2022-04-01T09:54:37.633950 #9401] DEBUG -- :   OrderItem Load (1.2ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 3
+D, [2022-04-01T09:54:37.636618 #9401] DEBUG -- :   Product Load (0.9ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
+D, [2022-04-01T09:54:37.638722 #9401] DEBUG -- :   Product Load (0.8ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1
+D, [2022-04-01T09:55:50.700538 #9502] DEBUG -- :   Product Load (0.6ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-01T09:55:50.707597 #9502] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 3
+D, [2022-04-01T09:55:50.710502 #9502] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 1
+D, [2022-04-01T09:55:50.720709 #9502] DEBUG -- :   Product Load (0.6ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
+D, [2022-04-01T09:55:50.722342 #9502] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 3
+D, [2022-04-01T09:55:50.723585 #9502] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
+D, [2022-04-01T09:55:50.724806 #9502] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1
+D, [2022-04-01T09:56:29.454043 #9556] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-01T09:56:29.461457 #9556] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE (price <= 0.20) ORDER BY `products`.`id` ASC LIMIT 3
+D, [2022-04-01T09:56:29.464109 #9556] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 1
+D, [2022-04-01T09:56:29.473654 #9556] DEBUG -- :   Product Load (0.6ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
+D, [2022-04-01T09:56:29.475141 #9556] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE (quantity >= '100') ORDER BY `order_items`.`id` ASC LIMIT 3
+D, [2022-04-01T09:56:29.476476 #9556] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
+D, [2022-04-01T09:56:29.477844 #9556] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1
