@@ -2,7 +2,7 @@ require_relative '../connection'
 require_relative '../models'
 
 puts "-----------------------"
-puts "Requirement 2"
+puts "Requirement 3"
 puts "-----------------------"
 
 puts 'Get cheap first'
