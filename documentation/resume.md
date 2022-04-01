@@ -65,3 +65,27 @@ class OrderItem < ActiveRecord::Base
     belongs_to :product
 end
 ```
+
+## ActiveRecord
+
+You have to add this in the begining of each files that uses AR objects
+```ruby
+require_relative 'connection'
+require_relative 'models'
+```
+> Be careful it's the path from root inside a folder you need to add `../`
+
+### Create
+
+Simple creation
+```ruby
+fru = Category.create(name: 'fruits')
+```
+Create with attributes (from array)
+```ruby 
+  an_order.order_items << [
+  OrderItem.new(quantity: 3, product: product3),
+  OrderItem.new(quantity: 200, product: product4)
+]
+an_order.save
+```
