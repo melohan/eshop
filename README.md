@@ -14,7 +14,7 @@ The objective is to create an object and relational model for an e-commerce syst
 This project satisfies the following requirements. 
 Step by step realization of the project:
 
-1. [-](documentation/requirements/2_1-requirement.md)
+1. [Create migrations and models](documentation/requirements/2_1-requirement.md)
 2. [-](documentation/requirements/2_2-requirement.md)
 3. [-](documentation/requirements/2_3-requirement.md)
 4. [-](documentation/requirements/2_4-requirement.md)
