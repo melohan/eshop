@@ -59,4 +59,17 @@ order1 = client3.orders.create(status: 'PROGRESS', order_items: [
   item3
 ])
 
+
+Supplier.create(
+  [
+    { name: 'migros' },
+    { name: 'denner', phoneNumber: '+41 21 222 33 11' },
+    { name: 'manor' },
+  ]
+)
+
+Supplier.first.products  << [Product.first]
+Supplier.second.products << [Product.second, Product.third]
+Supplier.third.products  << [Product.second]
+
 puts '------ Done ------'

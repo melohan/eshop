@@ -16,6 +16,8 @@ rake db:new_migration name=CreateMy_object     options="attribute1:string attrib
 |t.integer :attribute|
 |t.references :otherObject, foreign_key: true, type: :bigint|
 
+`foreign_key: { on_delete: :nullify, on_update: :cascade }`
+
 ### Add column
 
 Command
@@ -30,6 +32,13 @@ And if you need to specify or edit a type, edit migration file
       t.string :brand, limit: 120
     end
   end
+```
+
+### Add references
+
+Add this supplier reference in `categories`
+```ruby
+rake db:new_migration name=AddSupplierToProducts options="supplier:references"
 ```
 
 ## DB Relations
