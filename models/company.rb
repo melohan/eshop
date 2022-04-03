@@ -1,5 +1,5 @@
 class Company < Client
     def to_s
-        "#{brand} (#{type})"
+        "#{brand}"
     end
 end

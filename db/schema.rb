@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_03_125016) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_03_213024) do
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", limit: 50
     t.string "description"
@@ -21,6 +21,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_03_125016) do
     t.string "firstname", limit: 60
     t.string "lastname", limit: 60
     t.string "brand", limit: 120
+  end
+
+  create_table "comments", charset: "utf8mb4", force: :cascade do |t|
+    t.string "body"
+    t.bigint "author_id"
+    t.string "target_type"
+    t.bigint "target_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_comments_on_author_id"
+    t.index ["target_type", "target_id"], name: "index_comments_on_target"
   end
 
   create_table "order_items", charset: "utf8mb4", force: :cascade do |t|
@@ -55,6 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_03_125016) do
     t.string "phoneNumber"
   end
 
+  add_foreign_key "comments", "clients", column: "author_id", on_update: :cascade, on_delete: :nullify
   add_foreign_key "order_items", "orders", on_delete: :cascade
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "clients"
