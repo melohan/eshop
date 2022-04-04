@@ -22,18 +22,32 @@ Step by step realization of the project:
 4. [Validations](documentation/requirements/2_4-requirement.md)
 5. [Callbacks](documentation/requirements/2_5-requirement.md)
 6. [Single Table inheritance](documentation/requirements/2_6-requirement.md)
-7. [-](documentation/requirements/2_7-requirement.md)
-8. [-](documentation/requirements/2_8-requirement.md)
-9. [-](documentation/requirements/2_9-requirement.md)
+7. [Link each product to a supplier](documentation/requirements/2_7-requirement.md)
+8. [Polymorphic association](documentation/requirements/2_8-requirement.md)
+9. [Observers](documentation/requirements/2_9-requirement.md)
 
 ### First installation
 
-Required gems:
+Add this to your  gemfile:
+
+Add in your `Gemfile`
+```
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+gem 'activerecord', "~> 6"
+gem 'active_record_migrations', "~> 6"
+gem 'mysql2'
+gem 'solargraph'
+```
+
+Install gems:
 ```shell
 gem install activerecord
 gem install bundler 
-gem install active_record_migrations
-gem externe: rails-observers
 gem install rake
 ```
 
@@ -78,4 +92,25 @@ $ cp db/example.config.yml db/config.yml
 
 ```
 $ ruby main.rb
+```
+
+### Configure autoloader
+1. Create `init.rb` and add in this file
+```ruby
+require "zeitwerk"
+
+loader = Zeitwerk::Loader.new
+loader.push_dir("#{__dir__}/models")
+loader.setup
+```
+
+2. Add in Gemfile
+```
+#autoloader
+gem 'zeitwerk'
+```
+
+3. Now you only have to add in each ruby file this require:
+```
+require_relative 'init'
 ```

@@ -8,3 +8,7 @@ gem 'activerecord', "~> 6"
 gem 'active_record_migrations', "~> 6"
 gem 'mysql2'
 gem 'solargraph'
+gem 'rails-observers'
+
+#autoloader
+gem 'zeitwerk'

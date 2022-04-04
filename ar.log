@@ -1827,3 +1827,316 @@ D, [2022-04-04T00:01:21.295790 #8432] DEBUG -- :   Comment Load (0.3ms)  SELECT 
 D, [2022-04-04T00:01:21.297092 #8432] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
 D, [2022-04-04T00:01:21.298221 #8432] DEBUG -- :   Supplier Load (0.2ms)  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 1 LIMIT 1
 D, [2022-04-04T00:01:21.299178 #8432] DEBUG -- :   Supplier Load (0.3ms)  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 2 LIMIT 1
+D, [2022-04-04T15:17:49.051444 #6073] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:17:49.053116 #6073] DEBUG -- :   Category Create (0.7ms)  INSERT INTO `categories` (`name`) VALUES ('fruits')
+D, [2022-04-04T15:17:49.055757 #6073] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT
+D, [2022-04-04T15:17:49.057332 #6073] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:17:49.058294 #6073] DEBUG -- :   Category Create (0.7ms)  INSERT INTO `categories` (`name`) VALUES ('random')
+D, [2022-04-04T15:17:49.060293 #6073] DEBUG -- :   TRANSACTION (1.5ms)  COMMIT
+D, [2022-04-04T15:17:49.061772 #6073] DEBUG -- :   TRANSACTION (0.6ms)  BEGIN
+D, [2022-04-04T15:17:49.062653 #6073] DEBUG -- :   Category Create (0.6ms)  INSERT INTO `categories` (`name`) VALUES ('vegetables')
+D, [2022-04-04T15:17:49.064155 #6073] DEBUG -- :   TRANSACTION (1.0ms)  COMMIT
+D, [2022-04-04T15:17:49.065853 #6073] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:17:49.067133 #6073] DEBUG -- :   Category Create (1.0ms)  INSERT INTO `categories` (`name`) VALUES ('clothes')
+D, [2022-04-04T15:17:49.068730 #6073] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2022-04-04T15:17:49.083222 #6073] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:17:49.084228 #6073] DEBUG -- :   Product Create (0.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('apple', 2.35, 'Little apple', 1)
+D, [2022-04-04T15:17:49.086053 #6073] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:17:49.087473 #6073] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T15:17:49.087785 #6073] DEBUG -- :   Product Create (0.2ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('lemon', 6.15, 'Big lemon', 1)
+D, [2022-04-04T15:17:49.089782 #6073] DEBUG -- :   TRANSACTION (1.5ms)  COMMIT
+D, [2022-04-04T15:17:49.091548 #6073] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:17:49.092427 #6073] DEBUG -- :   Product Create (0.6ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('potato', 25.95, 'A limousine', 3)
+D, [2022-04-04T15:17:49.094283 #6073] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT
+D, [2022-04-04T15:17:49.096017 #6073] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T15:17:49.096751 #6073] DEBUG -- :   Product Create (0.5ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Jeans', 100.0, 'Little apple', 4)
+D, [2022-04-04T15:17:49.098861 #6073] DEBUG -- :   TRANSACTION (1.4ms)  COMMIT
+D, [2022-04-04T15:17:49.100572 #6073] DEBUG -- :   TRANSACTION (0.4ms)  BEGIN
+D, [2022-04-04T15:17:49.101038 #6073] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Sweat', 60.0, 'Big lemon', 4)
+D, [2022-04-04T15:17:49.103074 #6073] DEBUG -- :   TRANSACTION (1.5ms)  COMMIT
+D, [2022-04-04T15:17:49.105092 #6073] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:17:49.106007 #6073] DEBUG -- :   Product Create (0.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Crop top', 30.0, 'A limousine', 4)
+D, [2022-04-04T15:17:49.107554 #6073] DEBUG -- :   TRANSACTION (1.0ms)  COMMIT
+D, [2022-04-04T15:17:49.115444 #6073] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:17:49.116258 #6073] DEBUG -- :   Client Create (0.6ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Rachel', 'Green')
+D, [2022-04-04T15:17:49.117706 #6073] DEBUG -- :   TRANSACTION (1.0ms)  COMMIT
+D, [2022-04-04T15:17:49.119256 #6073] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T15:17:49.119916 #6073] DEBUG -- :   Client Create (0.4ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Karen', 'Smith')
+D, [2022-04-04T15:17:49.121399 #6073] DEBUG -- :   TRANSACTION (1.0ms)  COMMIT
+D, [2022-04-04T15:17:49.123132 #6073] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:17:49.124008 #6073] DEBUG -- :   Client Create (0.6ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Ada', 'Noether')
+D, [2022-04-04T15:17:49.125638 #6073] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2022-04-04T15:17:49.159851 #6073] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:17:49.160816 #6073] DEBUG -- :   Order Create (0.7ms)  INSERT INTO `orders` (`created_at`, `status`, `client_id`) VALUES ('2022-04-04 13:17:49.158342', 'PROGRESS', 1)
+D, [2022-04-04T15:17:49.163041 #6073] DEBUG -- :   OrderItem Create (0.7ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `order_id`, `product_id`) VALUES (2, 2.35, 1, 1)
+D, [2022-04-04T15:17:49.164177 #6073] DEBUG -- :   TRANSACTION (0.6ms)  ROLLBACK
+D, [2022-04-04T15:18:42.112449 #6165] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:18:42.113489 #6165] DEBUG -- :   Category Create (0.7ms)  INSERT INTO `categories` (`name`) VALUES ('fruits')
+D, [2022-04-04T15:18:42.121282 #6165] DEBUG -- :   TRANSACTION (6.3ms)  COMMIT
+D, [2022-04-04T15:18:42.123310 #6165] DEBUG -- :   TRANSACTION (0.6ms)  BEGIN
+D, [2022-04-04T15:18:42.124309 #6165] DEBUG -- :   Category Create (0.7ms)  INSERT INTO `categories` (`name`) VALUES ('random')
+D, [2022-04-04T15:18:42.126560 #6165] DEBUG -- :   TRANSACTION (1.6ms)  COMMIT
+D, [2022-04-04T15:18:42.128141 #6165] DEBUG -- :   TRANSACTION (0.6ms)  BEGIN
+D, [2022-04-04T15:18:42.129156 #6165] DEBUG -- :   Category Create (0.7ms)  INSERT INTO `categories` (`name`) VALUES ('vegetables')
+D, [2022-04-04T15:18:42.130851 #6165] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:18:42.132578 #6165] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:18:42.133554 #6165] DEBUG -- :   Category Create (0.7ms)  INSERT INTO `categories` (`name`) VALUES ('clothes')
+D, [2022-04-04T15:18:42.135569 #6165] DEBUG -- :   TRANSACTION (1.5ms)  COMMIT
+D, [2022-04-04T15:18:42.150633 #6165] DEBUG -- :   TRANSACTION (0.8ms)  BEGIN
+D, [2022-04-04T15:18:42.151678 #6165] DEBUG -- :   Product Create (0.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('apple', 2.35, 'Little apple', 5)
+D, [2022-04-04T15:18:42.153688 #6165] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT
+D, [2022-04-04T15:18:42.155939 #6165] DEBUG -- :   TRANSACTION (0.6ms)  BEGIN
+D, [2022-04-04T15:18:42.156992 #6165] DEBUG -- :   Product Create (0.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('lemon', 6.15, 'Big lemon', 5)
+D, [2022-04-04T15:18:42.158797 #6165] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:18:42.160682 #6165] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:18:42.161819 #6165] DEBUG -- :   Product Create (0.9ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('potato', 25.95, 'A limousine', 7)
+D, [2022-04-04T15:18:42.163602 #6165] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:18:42.165959 #6165] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:18:42.167022 #6165] DEBUG -- :   Product Create (0.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Jeans', 100.0, 'Little apple', 8)
+D, [2022-04-04T15:18:42.168877 #6165] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT
+D, [2022-04-04T15:18:42.170820 #6165] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:18:42.171697 #6165] DEBUG -- :   Product Create (0.6ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Sweat', 60.0, 'Big lemon', 8)
+D, [2022-04-04T15:18:42.173892 #6165] DEBUG -- :   TRANSACTION (1.6ms)  COMMIT
+D, [2022-04-04T15:18:42.176469 #6165] DEBUG -- :   TRANSACTION (0.6ms)  BEGIN
+D, [2022-04-04T15:18:42.177572 #6165] DEBUG -- :   Product Create (0.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Crop top', 30.0, 'A limousine', 8)
+D, [2022-04-04T15:18:42.179905 #6165] DEBUG -- :   TRANSACTION (1.4ms)  COMMIT
+D, [2022-04-04T15:18:42.188468 #6165] DEBUG -- :   TRANSACTION (0.8ms)  BEGIN
+D, [2022-04-04T15:18:42.189456 #6165] DEBUG -- :   Client Create (0.7ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Rachel', 'Green')
+D, [2022-04-04T15:18:42.191122 #6165] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2022-04-04T15:18:42.192980 #6165] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:18:42.194195 #6165] DEBUG -- :   Client Create (0.7ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Karen', 'Smith')
+D, [2022-04-04T15:18:42.196199 #6165] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT
+D, [2022-04-04T15:18:42.197430 #6165] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T15:18:42.197724 #6165] DEBUG -- :   Client Create (0.2ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Ada', 'Noether')
+D, [2022-04-04T15:18:42.201344 #6165] DEBUG -- :   TRANSACTION (3.0ms)  COMMIT
+D, [2022-04-04T15:18:42.234194 #6165] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T15:18:42.235284 #6165] DEBUG -- :   Order Create (0.8ms)  INSERT INTO `orders` (`created_at`, `status`, `client_id`) VALUES ('2022-04-04 13:18:42.233004', 'PROGRESS', 4)
+D, [2022-04-04T15:18:42.237469 #6165] DEBUG -- :   OrderItem Create (0.7ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `order_id`, `product_id`) VALUES (2, 2.35, 2, 7)
+D, [2022-04-04T15:18:42.238860 #6165] DEBUG -- :   TRANSACTION (0.7ms)  ROLLBACK
+D, [2022-04-04T15:41:24.506879 #1939] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:41:24.510954 #1939] DEBUG -- :   Category Create (3.3ms)  INSERT INTO `categories` (`name`) VALUES ('fruits')
+D, [2022-04-04T15:41:24.514647 #1939] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:41:24.516423 #1939] DEBUG -- :   TRANSACTION (0.4ms)  BEGIN
+D, [2022-04-04T15:41:24.517349 #1939] DEBUG -- :   Category Create (0.7ms)  INSERT INTO `categories` (`name`) VALUES ('random')
+D, [2022-04-04T15:41:24.519074 #1939] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2022-04-04T15:41:24.520543 #1939] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T15:41:24.521199 #1939] DEBUG -- :   Category Create (0.4ms)  INSERT INTO `categories` (`name`) VALUES ('vegetables')
+D, [2022-04-04T15:41:24.523451 #1939] DEBUG -- :   TRANSACTION (1.8ms)  COMMIT
+D, [2022-04-04T15:41:24.525157 #1939] DEBUG -- :   TRANSACTION (0.4ms)  BEGIN
+D, [2022-04-04T15:41:24.526033 #1939] DEBUG -- :   Category Create (0.6ms)  INSERT INTO `categories` (`name`) VALUES ('clothes')
+D, [2022-04-04T15:41:24.527798 #1939] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2022-04-04T15:41:24.541919 #1939] DEBUG -- :   TRANSACTION (0.7ms)  BEGIN
+D, [2022-04-04T15:41:24.543157 #1939] DEBUG -- :   Product Create (1.0ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('apple', 2.35, 'Little apple', 9)
+D, [2022-04-04T15:41:24.545422 #1939] DEBUG -- :   TRANSACTION (1.5ms)  COMMIT
+D, [2022-04-04T15:41:24.547476 #1939] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:41:24.548371 #1939] DEBUG -- :   Product Create (0.6ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('lemon', 6.15, 'Big lemon', 9)
+D, [2022-04-04T15:41:24.550393 #1939] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:41:24.552450 #1939] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:41:24.553406 #1939] DEBUG -- :   Product Create (0.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('potato', 25.95, 'A limousine', 11)
+D, [2022-04-04T15:41:24.557166 #1939] DEBUG -- :   TRANSACTION (3.1ms)  COMMIT
+D, [2022-04-04T15:41:24.559702 #1939] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:41:24.560667 #1939] DEBUG -- :   Product Create (0.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Jeans', 100.0, 'Little apple', 12)
+D, [2022-04-04T15:41:24.562502 #1939] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:41:24.564746 #1939] DEBUG -- :   TRANSACTION (0.7ms)  BEGIN
+D, [2022-04-04T15:41:24.565737 #1939] DEBUG -- :   Product Create (0.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Sweat', 60.0, 'Big lemon', 12)
+D, [2022-04-04T15:41:24.567532 #1939] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:41:24.569519 #1939] DEBUG -- :   TRANSACTION (0.6ms)  BEGIN
+D, [2022-04-04T15:41:24.570578 #1939] DEBUG -- :   Product Create (0.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Crop top', 30.0, 'A limousine', 12)
+D, [2022-04-04T15:41:24.572422 #1939] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:41:24.581223 #1939] DEBUG -- :   TRANSACTION (0.4ms)  BEGIN
+D, [2022-04-04T15:41:24.582236 #1939] DEBUG -- :   Client Create (0.8ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Rachel', 'Green')
+D, [2022-04-04T15:41:24.584053 #1939] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT
+D, [2022-04-04T15:41:24.585963 #1939] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:41:24.586943 #1939] DEBUG -- :   Client Create (0.7ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Karen', 'Smith')
+D, [2022-04-04T15:41:24.588650 #1939] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2022-04-04T15:41:24.590504 #1939] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:41:24.591453 #1939] DEBUG -- :   Client Create (0.7ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Ada', 'Noether')
+D, [2022-04-04T15:41:24.593226 #1939] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:41:24.634619 #1939] DEBUG -- :   TRANSACTION (0.4ms)  BEGIN
+D, [2022-04-04T15:41:24.635662 #1939] DEBUG -- :   Order Create (0.8ms)  INSERT INTO `orders` (`created_at`, `status`, `client_id`) VALUES ('2022-04-04 13:41:24.633497', 'PROGRESS', 7)
+D, [2022-04-04T15:41:24.638089 #1939] DEBUG -- :   OrderItem Create (0.9ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `order_id`, `product_id`) VALUES (2, 2.35, 3, 13)
+D, [2022-04-04T15:41:24.639439 #1939] DEBUG -- :   TRANSACTION (0.6ms)  ROLLBACK
+D, [2022-04-04T15:42:56.560063 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.561175 #2037] DEBUG -- :   Category Create (0.8ms)  INSERT INTO `categories` (`name`) VALUES ('fruits')
+D, [2022-04-04T15:42:56.569134 #2037] DEBUG -- :   TRANSACTION (6.3ms)  COMMIT
+D, [2022-04-04T15:42:56.571241 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.572247 #2037] DEBUG -- :   Category Create (0.7ms)  INSERT INTO `categories` (`name`) VALUES ('random')
+D, [2022-04-04T15:42:56.574101 #2037] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:42:56.575885 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.576896 #2037] DEBUG -- :   Category Create (0.7ms)  INSERT INTO `categories` (`name`) VALUES ('vegetables')
+D, [2022-04-04T15:42:56.578667 #2037] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2022-04-04T15:42:56.580379 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.581437 #2037] DEBUG -- :   Category Create (0.8ms)  INSERT INTO `categories` (`name`) VALUES ('clothes')
+D, [2022-04-04T15:42:56.583359 #2037] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:42:56.596134 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.597210 #2037] DEBUG -- :   Product Create (0.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('apple', 2.35, 'Little apple', 13)
+D, [2022-04-04T15:42:56.599193 #2037] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
+D, [2022-04-04T15:42:56.601014 #2037] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T15:42:56.602041 #2037] DEBUG -- :   Product Create (0.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('lemon', 6.15, 'Big lemon', 13)
+D, [2022-04-04T15:42:56.603904 #2037] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2022-04-04T15:42:56.606334 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.607427 #2037] DEBUG -- :   Product Create (0.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('potato', 25.95, 'A limousine', 15)
+D, [2022-04-04T15:42:56.609082 #2037] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2022-04-04T15:42:56.611007 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.612164 #2037] DEBUG -- :   Product Create (0.9ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Jeans', 100.0, 'Little apple', 16)
+D, [2022-04-04T15:42:56.614067 #2037] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT
+D, [2022-04-04T15:42:56.616408 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.617478 #2037] DEBUG -- :   Product Create (0.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Sweat', 60.0, 'Big lemon', 16)
+D, [2022-04-04T15:42:56.619493 #2037] DEBUG -- :   TRANSACTION (1.4ms)  COMMIT
+D, [2022-04-04T15:42:56.621395 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.622433 #2037] DEBUG -- :   Product Create (0.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`) VALUES ('Crop top', 30.0, 'A limousine', 16)
+D, [2022-04-04T15:42:56.624428 #2037] DEBUG -- :   TRANSACTION (1.4ms)  COMMIT
+D, [2022-04-04T15:42:56.632408 #2037] DEBUG -- :   TRANSACTION (0.8ms)  BEGIN
+D, [2022-04-04T15:42:56.633369 #2037] DEBUG -- :   Client Create (0.7ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Rachel', 'Green')
+D, [2022-04-04T15:42:56.635354 #2037] DEBUG -- :   TRANSACTION (1.4ms)  COMMIT
+D, [2022-04-04T15:42:56.637052 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.637960 #2037] DEBUG -- :   Client Create (0.6ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Karen', 'Smith')
+D, [2022-04-04T15:42:56.639973 #2037] DEBUG -- :   TRANSACTION (1.4ms)  COMMIT
+D, [2022-04-04T15:42:56.641708 #2037] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:42:56.642709 #2037] DEBUG -- :   Client Create (0.7ms)  INSERT INTO `clients` (`firstname`, `lastname`) VALUES ('Ada', 'Noether')
+D, [2022-04-04T15:42:56.645577 #2037] DEBUG -- :   TRANSACTION (2.3ms)  COMMIT
+D, [2022-04-04T15:42:56.675525 #2037] DEBUG -- :   TRANSACTION (0.6ms)  BEGIN
+D, [2022-04-04T15:42:56.676513 #2037] DEBUG -- :   Order Create (0.7ms)  INSERT INTO `orders` (`created_at`, `status`, `client_id`) VALUES ('2022-04-04 13:42:56.674232', 'PROGRESS', 10)
+D, [2022-04-04T15:42:56.678793 #2037] DEBUG -- :   OrderItem Create (0.7ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `order_id`, `product_id`) VALUES (2, 2.35, 4, 19)
+D, [2022-04-04T15:42:56.680093 #2037] DEBUG -- :   TRANSACTION (0.6ms)  ROLLBACK
+D, [2022-04-04T15:50:26.080682 #2729] DEBUG -- :   Product Load (0.8ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T15:50:26.094988 #2729] DEBUG -- :   TRANSACTION (0.7ms)  BEGIN
+D, [2022-04-04T15:50:26.107704 #2729] DEBUG -- :   Category Load (0.8ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T15:50:26.110348 #2729] DEBUG -- :   TRANSACTION (0.5ms)  ROLLBACK
+D, [2022-04-04T15:50:40.102991 #2759] DEBUG -- :   Product Load (0.7ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T15:50:40.117964 #2759] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T15:50:40.124447 #2759] DEBUG -- :   Category Load (0.8ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T15:50:40.127421 #2759] DEBUG -- :   TRANSACTION (0.6ms)  ROLLBACK
+D, [2022-04-04T15:51:30.039256 #2854] DEBUG -- :   Product Load (1.1ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T15:51:30.054389 #2854] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2022-04-04T15:51:30.061963 #2854] DEBUG -- :   Category Load (0.9ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T15:51:30.064916 #2854] DEBUG -- :   TRANSACTION (0.3ms)  COMMIT
+D, [2022-04-04T15:54:34.348070 #3094] DEBUG -- :   Product Load (0.6ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T15:55:06.920825 #3131] DEBUG -- :   Product Load (0.8ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:17:07.517891 #6495] DEBUG -- :   Order Load (0.3ms)  SELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC LIMIT 1
+D, [2022-04-04T20:17:22.492303 #6519] DEBUG -- :   Order Load (0.3ms)  SELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC LIMIT 1
+D, [2022-04-04T20:18:29.674711 #6602] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` ORDER BY `order_items`.`id` ASC LIMIT 1
+D, [2022-04-04T20:18:29.685674 #6602] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:19:20.009425 #6654] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` ORDER BY `order_items`.`id` ASC LIMIT 1
+D, [2022-04-04T20:19:20.016608 #6654] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T20:19:20.020237 #6654] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:19:20.029924 #6654] DEBUG -- :   Order Load (0.3ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:19:20.032607 #6654] DEBUG -- :   TRANSACTION (0.3ms)  COMMIT
+D, [2022-04-04T20:19:26.271383 #6676] DEBUG -- :   OrderItem Load (0.3ms)  SELECT `order_items`.* FROM `order_items` ORDER BY `order_items`.`id` ASC LIMIT 1
+D, [2022-04-04T20:19:26.279369 #6676] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T20:19:26.283813 #6676] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:19:26.294217 #6676] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:19:26.296915 #6676] DEBUG -- :   TRANSACTION (0.3ms)  COMMIT
+D, [2022-04-04T20:20:18.519054 #6752] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:20:18.528134 #6752] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T20:20:18.531711 #6752] DEBUG -- :   Category Load (0.3ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:20:18.537180 #6752] DEBUG -- :   TRANSACTION (0.4ms)  ROLLBACK
+D, [2022-04-04T20:20:25.118109 #6775] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:20:25.127490 #6775] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T20:20:25.130494 #6775] DEBUG -- :   Category Load (0.3ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:20:25.135900 #6775] DEBUG -- :   TRANSACTION (0.2ms)  ROLLBACK
+D, [2022-04-04T20:21:21.848573 #6890] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:21:21.857362 #6890] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T20:21:21.860999 #6890] DEBUG -- :   Category Load (0.4ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:21:21.862609 #6890] DEBUG -- :   TRANSACTION (0.3ms)  ROLLBACK
+D, [2022-04-04T20:21:54.347540 #6939] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:21:54.357523 #6939] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T20:21:54.361170 #6939] DEBUG -- :   Category Load (0.4ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:21:54.362855 #6939] DEBUG -- :   TRANSACTION (0.3ms)  ROLLBACK
+D, [2022-04-04T20:22:11.159432 #6973] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:22:11.168594 #6973] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T20:22:11.172003 #6973] DEBUG -- :   Category Load (0.3ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:22:11.173600 #6973] DEBUG -- :   TRANSACTION (0.3ms)  ROLLBACK
+D, [2022-04-04T20:22:49.281128 #7007] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:22:57.604302 #7027] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:26:31.914181 #7354] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:26:38.306921 #7376] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:26:38.313330 #7376] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:26:38.318107 #7376] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T20:26:38.321671 #7376] DEBUG -- :   Category Load (0.3ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:26:38.323389 #7376] DEBUG -- :   TRANSACTION (0.3ms)  ROLLBACK
+D, [2022-04-04T20:26:48.866592 #7391] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:26:48.872430 #7391] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:26:48.877954 #7391] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T20:26:48.881497 #7391] DEBUG -- :   Category Load (0.4ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:26:48.887920 #7391] DEBUG -- :   TRANSACTION (0.5ms)  ROLLBACK
+D, [2022-04-04T20:26:59.413232 #7418] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:26:59.418833 #7418] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:26:59.424597 #7418] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2022-04-04T20:26:59.427698 #7418] DEBUG -- :   Category Load (0.3ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:26:59.429545 #7418] DEBUG -- :   TRANSACTION (0.3ms)  ROLLBACK
+D, [2022-04-04T20:27:24.850199 #7468] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:27:24.856058 #7468] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:27:30.589948 #7483] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:27:30.596668 #7483] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:27:30.597070 #7483] DEBUG -- :   Product Load (0.1ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:27:42.585728 #7504] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:27:42.591024 #7504] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:27:42.591787 #7504] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:28:19.807527 #7560] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:28:19.813216 #7560] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:28:19.818191 #7560] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T20:28:19.821711 #7560] DEBUG -- :   Category Load (0.3ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:28:19.823738 #7560] DEBUG -- :   Product Update (0.5ms)  UPDATE `products` SET `products`.`levelOfStock` = 4 WHERE `products`.`id` = 1
+D, [2022-04-04T20:28:19.824490 #7560] DEBUG -- :   TRANSACTION (0.3ms)  ROLLBACK
+D, [2022-04-04T20:29:51.005608 #7756] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:29:51.011430 #7756] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:29:58.564689 #7773] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:29:58.570532 #7773] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:29:58.575513 #7773] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T20:29:58.578981 #7773] DEBUG -- :   Category Load (0.3ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:29:58.581035 #7773] DEBUG -- :   Product Update (0.6ms)  UPDATE `products` SET `products`.`levelOfStock` = 4 WHERE `products`.`id` = 1
+D, [2022-04-04T20:29:58.582546 #7773] DEBUG -- :   TRANSACTION (0.9ms)  ROLLBACK
+D, [2022-04-04T20:42:19.042153 #8361] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:42:19.047413 #8361] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:42:19.052368 #8361] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T20:42:19.056131 #8361] DEBUG -- :   Category Load (0.4ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:42:19.058261 #8361] DEBUG -- :   Product Update (0.3ms)  UPDATE `products` SET `products`.`description` = 'none' WHERE `products`.`id` = 1
+D, [2022-04-04T20:42:19.059291 #8361] DEBUG -- :   TRANSACTION (0.4ms)  ROLLBACK
+D, [2022-04-04T20:42:43.428963 #8395] DEBUG -- :   Product Load (0.7ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:42:43.435114 #8395] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:42:49.446946 #8415] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:42:49.452133 #8415] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:42:49.457622 #8415] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T20:42:49.460621 #8415] DEBUG -- :   Category Load (0.3ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:42:49.467258 #8415] DEBUG -- :   Product Update (0.5ms)  UPDATE `products` SET `products`.`description` = 'none' WHERE `products`.`id` = 1
+D, [2022-04-04T20:42:49.467921 #8415] DEBUG -- :   TRANSACTION (0.2ms)  ROLLBACK
+D, [2022-04-04T20:49:20.044607 #8642] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:49:31.918553 #8667] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:50:04.081873 #8708] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:50:28.968914 #8753] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:50:45.902202 #8781] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:50:56.147898 #8799] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:50:56.156486 #8799] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T20:50:56.159881 #8799] DEBUG -- :   Category Load (0.4ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:50:56.161305 #8799] DEBUG -- :   TRANSACTION (0.2ms)  ROLLBACK
+D, [2022-04-04T20:51:00.662612 #8820] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:51:00.671522 #8820] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2022-04-04T20:51:00.675737 #8820] DEBUG -- :   Category Load (0.4ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:51:00.677108 #8820] DEBUG -- :   TRANSACTION (0.3ms)  ROLLBACK
+D, [2022-04-04T20:51:33.492171 #8868] DEBUG -- :   Product Load (0.7ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:51:33.501136 #8868] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T20:51:33.504748 #8868] DEBUG -- :   Category Load (0.6ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:51:33.506216 #8868] DEBUG -- :   TRANSACTION (0.3ms)  ROLLBACK
+D, [2022-04-04T20:52:38.700756 #8961] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:55:29.263779 #9262] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:55:57.187630 #9301] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:56:11.054807 #9323] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:56:11.063941 #9323] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-04T20:56:11.067498 #9323] DEBUG -- :   Category Load (0.4ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:56:11.069586 #9323] DEBUG -- :   Product Update (0.4ms)  UPDATE `products` SET `products`.`stock` = 1 WHERE `products`.`id` = 1
+D, [2022-04-04T20:56:11.076084 #9323] DEBUG -- :   TRANSACTION (6.1ms)  COMMIT
+D, [2022-04-04T20:57:10.668065 #9438] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:57:34.319208 #9491] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-04T20:57:34.328776 #9491] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2022-04-04T20:57:34.331835 #9491] DEBUG -- :   Category Load (0.3ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-04T20:57:34.337222 #9491] DEBUG -- :   Product Update (0.3ms)  UPDATE `products` SET `products`.`level_of_stock` = 1 WHERE `products`.`id` = 1
+D, [2022-04-04T20:57:34.343323 #9491] DEBUG -- :   TRANSACTION (5.8ms)  COMMIT
+D, [2022-04-05T00:31:05.703390 #13678] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-05T00:31:05.712331 #13678] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-05T00:31:05.715701 #13678] DEBUG -- :   Category Load (0.5ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-05T00:31:05.721008 #13678] DEBUG -- :   TRANSACTION (0.3ms)  COMMIT
+D, [2022-04-05T00:35:10.509574 #14652] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2022-04-05T00:35:10.518374 #14652] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2022-04-05T00:35:10.522143 #14652] DEBUG -- :   Category Load (0.4ms)  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+D, [2022-04-05T00:35:10.527292 #14652] DEBUG -- :   TRANSACTION (0.3ms)  COMMIT

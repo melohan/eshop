@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_03_213024) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_04_130534) do
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", limit: 50
     t.string "description"
@@ -57,6 +57,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_03_213024) do
     t.string "description", limit: 300
     t.bigint "category_id"
     t.bigint "supplier_id"
+    t.integer "level_of_stock"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["supplier_id"], name: "index_products_on_supplier_id"
   end

@@ -1,5 +1,4 @@
-require_relative '../connection'
-require_relative '../models'
+require_relative 'init'
 
 puts "-----------------------"
 puts "Requirement 7"
