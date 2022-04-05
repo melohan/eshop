@@ -9,9 +9,14 @@
 
 POO1 - Ruby ActiveRecord
 
+The objective is to create an object and relational model for an e-commerce system as part of the object-oriented programming course in the Ruby language.
+
+## Resume of commands
 [Commands and theory resume](documentation/resume.md)
 
-The objective is to create an object and relational model for an e-commerce system as part of the object-oriented programming course in the Ruby language.
+
+
+## Step by step
 
 This project satisfies the following requirements. 
 Step by step realization of the project:

@@ -1,121 +1,16 @@
-# Resume of commands
+# Active Records
 
-## Migration
+## Index
 
-### Create Model
-```shell
-rake db:new_migration name=CreateMy_object     options="attribute1:string attribute2:decimal"
-```
-#### Types
+1. [Validations](#validations)
+2. [Valid?](#valid)
+    - [Possibilities](#possibilities)
+3. [Callbacks](#callbacks)
+4. [Observers](#observers)
 
-|  Type  |
-| ------ |
-|t.string :attribute, limit: n|
-|t.datetime :attribute|
-|t.decimal :attribute, precision n, scale: m|
-|t.integer :attribute|
-|t.references :otherObject, foreign_key: true, type: :bigint|
+> You can see `each` and `sum` methods [here](#methods).
 
-`foreign_key: { on_delete: :nullify, on_update: :cascade }`
-
-### Add column
-
-Command
-```shell
-rake db:new_migration name=add_type_to_clients
-```
-
-And if you need to specify or edit a type, edit migration file
-```shell
-  def change
-    change_table :clients do |t|
-      t.string :brand, limit: 120
-    end
-  end
-```
-
-### Add references
-
-Add this supplier reference in `categories`
-```ruby
-rake db:new_migration name=AddSupplierToProducts options="supplier:references"
-```
-
-## DB Relations
-
-### 1-N
-
-Table `categories` has multiple `products`:
-
-Add `references` in table `products`
-```ruby
-class CreateProduct < ActiveRecord::Migration[7.0]
-  def change
-    create_table :products do |t|
-      t.references :category, foreign_key: true, type: :bigint
-    end
-  end
-end
-```
-In `category model`  add
-```ruby
-class Category < ActiveRecord::Base  
-    has_many :products
-end
-```
-In `product model`  add
-```ruby
-class Product < ActiveRecord::Base  
-    belongs_to :category
-end
-```
-
-###  N - N indirecte 
-`order` is composed of *several* `order_items` which `each reference a product`.
-```ruby
-class Order < ActiveRecord::Base
-    belongs_to :client
-    has_many :order_items
-    has_many :products, through: :order_items
-end
-  
-class Product < ActiveRecord::Base
-    belongs_to :category
-    has_many :order_items
-    has_many :orders, through: :order_items
-end
-
-class OrderItem < ActiveRecord::Base
-    belongs_to :order
-    belongs_to :product
-end
-```
-
-## ActiveRecord
-
-You have to add this in the begining of each files that uses AR objects
-```ruby
-require_relative 'connection'
-require_relative 'models'
-```
-> Be careful it's the path from root inside a folder you need to add `../`
-
-### Create
-
-Simple creation
-```ruby
-fru = Category.create(name: 'fruits')
-```
-Create with attributes (from array)
-```ruby 
-an_order.order_items << [
-  OrderItem.new(quantity: 3, product: product3),
-  OrderItem.new(quantity: 200, product: product4)
-]
-an_order.save
-```
-
-### Validations
+## Validations
 
 Syntax example:
 ```ruby
@@ -123,7 +18,7 @@ Syntax example:
 validates :product, :order, presence: true
 validates :quantity, numericality: {greater_than_or_equal_to: 1, only_integer: true}
 ```
-### Valid?
+## Valid?
 Before saving an Active Record object Rails return your validation.
 
 To trigger yourself your validation you can simply use `.valid?` or `.invalid?`
@@ -132,7 +27,7 @@ Client.create(firstname: "John", lastname: "Doe").valid?    # => true
 Client.create(firstname: nil, lastname: nil).invalid?       # => true
 ```
 
-#### Validate_associated
+## Validate_associated
 In the case where an associations need other models to be validated.
 ```ruby
 class Library < ApplicationRecord
@@ -141,7 +36,7 @@ class Library < ApplicationRecord
 end
 ```
 
-#### possibilities
+### Possibilities
 
 |  Type  |  Description  |
 | ------ |------|
@@ -161,7 +56,7 @@ class Car < ActiveRecord::Base
 end
 ```
 
-### Callbacks
+## Callbacks
 
 Example 
 ```ruby
@@ -182,7 +77,33 @@ The callbacks are executed in this order according to the three scenarios
     after_save            after_save
  
 
-## Methods
+## Observers
+
+You'll need:
+```
+require 'rails/observers/activerecord/active_record'
+```
+
+```ruby
+class ProductObserver < ActiveRecord::Observer
+  observe :product
+
+  def before_save(model)
+      if model.level_of_stock < 5
+          puts "Product #{model.name}'s quantity is bellow 5"
+      end
+  end
+end
+```
+
+In your main file you have to add this to make it works:
+```ruby 
+ActiveRecord::Base.observers << :product_observer
+ActiveRecord::Base.instantiate_observers
+
+```
+
+# Methods
 
 ## each
 Demo with display
