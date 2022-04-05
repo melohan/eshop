@@ -1,8 +1,8 @@
 ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=flat-square&logo=ruby&logoColor=white)
 
-![GitHub contributors](https://img.shields.io/github/contributors/melohan/exercise-eshop?style=flat-square)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/melohan/exercise-eshop/main?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/melohan/exercise-eshop?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/melohan/eshop?style=flat-square)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/melohan/eshop/main?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/melohan/eshop?style=flat-square)
 
 
 # Exercise eShop
@@ -12,7 +12,9 @@ POO1 - Ruby ActiveRecord
 The objective is to create an object and relational model for an e-commerce system as part of the object-oriented programming course in the Ruby language.
 
 ## Resume of commands
-[Commands and theory resume](documentation/resume.md)
+1. [ActiveRecord](documentation/resume/activeRecord.md)
+2. [Migration](documentation/resume/migration.md)
+3. [Models](documentation/resume/models.md)
 
 
 
